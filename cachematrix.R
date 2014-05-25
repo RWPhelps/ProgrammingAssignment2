@@ -23,15 +23,18 @@
 
 ## WcacheSolve  checks to see if matrix set and inversed or calulates inverse if not
   cacheSolve <- function(x, ...) {
-m <- x$getinv()
+       m <- x$getinv()
         if(!is.null(m)) {
-                message("getting cached data")
-                return(m)
-        }
+            if(x = M) {      ## if m not null and not changed use cached data
+      
+                  message("getting cached data")
+                  return(m)
+                  }
+      
+                }
         data <- x$get()
         m <- Solve(m) ## calucates the inverse of the matrix
         x$setinv(m)   ## stores the inverted Matrix
-        
-          ## Return a matrix that is the inverse of 'x'  
+        ## Return a matrix that is the inverse of 'x'  
         m
   }
