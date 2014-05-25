@@ -32,6 +32,6 @@ m <- x$getinv()
         m <- Solve(m) ## calucates the inverse of the matrix
         x$setinv(m)   ## stores the inverted Matrix
         
-          ## Return a matrix that is the inverse of 'x'
+          ## Return a matrix that is the inverse of 'x'  
         m
   }
